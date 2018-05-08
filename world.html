@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">    <!--css声明-->
+body{
+     background-color:skyblue;
+}</style>
+<script>
+function displayDate(){
+         document.getElementById("demo").innerHTML=Date();
+}
+</script>
+</head>
+
+<body>                 <!--主体-->
+
+<h1>My first Javascript programe！</h1>
+<p id="demo">This is the first paragraph.</p>
+<p id="dom">This is the second paragraph.</p>
+<button type="button" onclick="alert('Welcome')">CLick</button>  <!--加入之后css失效,在按钮上生效-->
+
+<p>验证bug检查：请输入一个5 到 10 之间的数字：</p>
+<input id="demo" type="text">
+<button type="button" onclick="bug()">测试输入</button>
+<p id="message">显示错误</p>
+
+<script>
+document.write("<h1>The first JS title!</h1>");
+
+function bug()
+{
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+	try {
+	    if(x == "") throw "z";
+		if(isNaN(x)) throw "not num";
+		x = Number(x);
+		if(x < 5) throw "small";
+		if(x > 10) throw "big";
+	}
+	catch(err){
+	    message.innerHTML="Bug："+err;
+	}
+}
+function changeImage()
+{
+    element=document.getElementById('myimage')
+	if (element.src.match("C:\Users\lai\Desktop\picture\16.jpg"))
+	{
+	   element.src="C:\Users\lai\Desktop\picture\15.jpg";
+	}
+	else
+	{
+	   element.src="C:\Users\lai\Desktop\picture\16.jpg";
+	}
+}
+function myFunction()
+{
+    x=document.getElementById("dom");//找到元素
+	x.innerHTML="Hello Javascript!";//改变内容
+}
+</script>
+
+<img id="myimage" onclick="changeImage()" src="C:\Users\lai\Desktop\picture\15.jpg" width="100" height="180">
+<p>点击灯泡可以打开关闭灯泡</p>
+<button type="button" onclick="myFunction()">Click</button>
+<button type="button" onclick="displayDate()">Show the time</button>
+
+</body>
+</html>
