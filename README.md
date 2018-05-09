@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-This is the theme coped from github!
+This is the theme coped from github!<br/>
 
 You can use the [editor on GitHub](https://github.com/Thingfor/Text/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
